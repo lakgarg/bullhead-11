@@ -115,15 +115,25 @@ on boot
     # don't run as a service to avoid race conditions
     exec - root root system -- /vendor/bin/init.bullhead.power.sh
 
+    # add a cpuset for the camera daemon
+    # we want all the little cores for camera
+    mkdir /dev/cpuset/camera-daemon
+    write /dev/cpuset/camera-daemon/cpus 0
+    write /dev/cpuset/camera-daemon/mems 0
+    chown system system /dev/cpuset/camera-daemon
+    chown system system /dev/cpuset/camera-daemon/tasks
+    chmod 0664 /dev/cpuset/camera-daemon/tasks
+
     # update foreground cpuset now that processors are up
     # foreground gets all CPUs except CPU 3
-    # CPU 3 is reserved for the top app
+    # CPU 3 is reserved for the top app and camera daemon
     write /dev/cpuset/foreground/cpus 0-2,4-5
     write /dev/cpuset/background/cpus 0
     write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/restricted/cpus 0-1
     write /dev/cpuset/top-app/cpus 0-5
     write /dev/cpuset/restricted/cpus 0-1
+    write /dev/cpuset/camera-daemon/cpus 0-3
 
     # Bluetooth
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
@@ -422,7 +432,7 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class main
     user camera
     group camera system inet input graphics
-    writepid /dev/cpuset/system-background/tasks
+    writepid /dev/cpuset/camera-daemon/tasks
 
 on property:persist.radio.atfwd.start=false
     stop atfwd
