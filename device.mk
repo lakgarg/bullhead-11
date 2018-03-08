@@ -510,7 +510,8 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=22 \
     telephony.lteOnCdmaDevice=1 \
-    persist.radio.mode_pref_nv10=1
+    persist.radio.mode_pref_nv10=1 \
+    persist.radio.add_power_save=1
 
 # Emergency call overrides for Korea
 PRODUCT_PROPERTY_OVERRIDES += \
