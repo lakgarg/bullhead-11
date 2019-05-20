@@ -1,0 +1,2 @@
+# Disable more Codec2.0 components
+debug.stagefright.ccodec=0
