@@ -69,9 +69,6 @@ on property:sys.boot_completed=1
     stop logger
 
 on init
-    # Load persistent dm-verity state
-    verity_load_state
-
     # NXP HAL expects /dev/pn54x
     symlink /dev/pn548 /dev/pn54x
 
