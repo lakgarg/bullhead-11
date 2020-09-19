@@ -265,6 +265,10 @@ PRODUCT_PACKAGES += \
     liblocation_api \
     gps.msm8992
 
+# Health HAL
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-service.bullhead
+
 # NFC packages
 PRODUCT_PACKAGES += \
     libnfc-nci \
