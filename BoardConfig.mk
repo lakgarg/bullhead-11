@@ -168,6 +168,10 @@ TARGET_FS_CONFIG_GEN += device/lge/bullhead/config.fs
 
 -include vendor/lge/bullhead/BoardConfigVendor.mk
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so
+
 # Testing related defines
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/bullhead-setup.sh
 
