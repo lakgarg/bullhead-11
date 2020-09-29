@@ -22,7 +22,7 @@ PRODUCT_COPY_FILES := device/lge/bullhead/apns-full-conf.xml:system/etc/apns-con
 
 # Inherit some common Statix stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/statix/config/common.mk)
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
