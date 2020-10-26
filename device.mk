@@ -421,10 +421,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.speaker.prot.enable=true \
     ro.config.vc_call_vol_steps=7
 
-# Default OMX service to non-Treble
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=false
-
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank.sw-audio=1
