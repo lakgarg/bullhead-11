@@ -254,14 +254,14 @@ static void power_hint(struct power_module *module, power_hint_t hint,
         {
             int duration_hint = 0;
 
-            // little core freq bump for 1.5s
+            // little core freq bump for 450ms
             int resources[] = {0x20C};
-            int duration = 1500;
+            int duration = 450;
             static int handle_little = 0;
 
-            // big core freq bump for 500ms
+            // big core freq bump for 50ms
             int resources_big[] = {0x2312, 0x1F08};
-            int duration_big = 500;
+            int duration_big = 50;
             static int handle_big = 0;
 
             // sched_downmigrate lowered to 10 for 1s at most
