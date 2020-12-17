@@ -170,10 +170,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bullhead.sh
 
-# VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v29.so  
-
 # Qseecomd configuration file
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.qseecomd.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.bullhead.qseecomd.sh
