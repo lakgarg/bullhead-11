@@ -250,8 +250,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     librmnetctl \
-    rmnetcli \
-    libaudioclient_shim
+    rmnetcli
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
