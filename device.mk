@@ -249,6 +249,7 @@ PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.0-service.bullhead
 
 PRODUCT_PACKAGES += \
+    libaudioclient_shim \
     librmnetctl \
     rmnetcli
 

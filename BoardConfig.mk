@@ -107,6 +107,10 @@ TARGET_AUX_OS_VARIANT_LIST := bullhead
 
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so
+
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
