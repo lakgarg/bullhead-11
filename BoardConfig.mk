@@ -109,6 +109,8 @@ OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /system/vendor/bin/ATFWD-daemon|libcutils_shim.so \
+    /system/vendor/lib64/libcne.so|libcutils_shim.so \
     /system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so
 
 # Enable dex-preoptimization to speed up first boot sequence

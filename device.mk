@@ -203,6 +203,10 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
 
+# libcutils
+PRODUCT_PACKAGES += \
+    libcutils_shim
+
 # Light HAL
 PRODUCT_PACKAGES += \
     lights.vts \
