@@ -207,6 +207,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcutils_shim
 
+# libprotobuf
+PRODUCT_PACKAGES += \
+    libprotobuf_shim
+
 # Light HAL
 PRODUCT_PACKAGES += \
     lights.vts \
